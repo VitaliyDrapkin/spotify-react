@@ -4,16 +4,19 @@ import NavItem from "../components/NavItem";
 import s from "./NavBar.module.css";
 
 import home_icon from "../../../assets/home_icon.png";
-interface NavItem {
+import browse_icon from "../../../assets/browse_icon.png";
+import liked_songs_icon from "../../../assets/liked_songs_icon.png";
+
+interface NavItemType {
   text: string;
   to: string;
   icon?: string;
 }
 
-const navItems: NavItem[] = [
+const navItems: NavItemType[] = [
   { text: "Home", to: "/home", icon: home_icon },
-  { text: "Browse", to: "/browse" },
-  { text: "Home", to: "/home" },
+  { text: "Browse", to: "/browse", icon: browse_icon },
+  { text: "Liked Songs", to: "/liked", icon: liked_songs_icon },
 ];
 
 export default function NavBar() {
@@ -21,14 +24,14 @@ export default function NavBar() {
 
   return (
     <div className={s.NavBar}>
-      <NavItem
-        text={"Home"}
-        to={"/home"}
-        isActive={location.pathname === "/home"}
-        icon={home_icon}
-      ></NavItem>
-      <NavItem text={"Browse"} to={"/browse"} isActive={false}></NavItem>
-      <NavItem text={"Liked Songs"} to={"/liked"} isActive={false}></NavItem>
+      {navItems.map((navItem) => (
+        <NavItem
+          text={navItem.text}
+          to={navItem.to}
+          isActive={location.pathname === navItem.to}
+          icon={navItem.icon}
+        ></NavItem>
+      ))}
     </div>
   );
 }
