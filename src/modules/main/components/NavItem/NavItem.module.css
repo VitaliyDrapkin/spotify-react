@@ -6,6 +6,11 @@
   align-items: center;
   border-color: black;
   position: relative;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.NavItem:hover {
+  background-color: lightgreen;
 }
 .Active {
   background-color: rgba(29, 185, 84, 0.15);
@@ -16,6 +21,7 @@
   font-size: 18px;
   line-height: 21px;
   margin-left: 73px;
+  color: #191414;
 }
 
 .Icon {
