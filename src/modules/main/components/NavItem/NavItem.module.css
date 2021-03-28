@@ -1,0 +1,26 @@
+.NavItem {
+  display: inline-flex;
+  width: 210px;
+  height: 55px;
+  border-radius: 10px;
+  align-items: center;
+  border-color: black;
+  position: relative;
+}
+.Active {
+  background-color: rgba(29, 185, 84, 0.15);
+}
+
+.Text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  margin-left: 73px;
+}
+
+.Icon {
+  width: 27px;
+  position: absolute;
+  left: 27px;
+  top: 13px;
+}
