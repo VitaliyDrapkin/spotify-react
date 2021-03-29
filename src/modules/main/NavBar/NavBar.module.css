@@ -1,6 +1,6 @@
 .NavBar {
   display: flex;
-  width: 270px;
+  width: 210px;
   flex-direction: column;
   height: 100vh;
   padding: 0 34px 0 26px;
@@ -9,5 +9,6 @@
 .Logo {
   width: 210px;
   height: 58px;
-  margin: 50px 31px 8px -21px;
+  margin: 49px 31px 8px -20px;
+  text-align: center;
 }
