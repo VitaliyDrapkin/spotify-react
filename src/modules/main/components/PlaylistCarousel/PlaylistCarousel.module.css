@@ -1,0 +1,17 @@
+.PlaylistCarousel {
+  padding: 120px 200px 100px 140px;
+}
+.Top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Title {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.Body {
+  margin-top: 40px;
+}

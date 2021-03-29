@@ -3,12 +3,12 @@
   width: 210px;
   flex-direction: column;
   height: 100vh;
-  padding: 0 34px 0 26px;
+  padding: 1px 34px 0 26px;
 }
 
 .Logo {
   width: 210px;
   height: 58px;
-  margin: 49px 31px 8px -20px;
+  margin: 48px 31px 8px -23px;
   text-align: center;
 }
