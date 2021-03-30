@@ -14,4 +14,12 @@
 
 .Body {
   margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Playlist {
+  margin-right: 25px;
+  margin-bottom: 20px;
 }

@@ -88,11 +88,17 @@ export default function PlaylistCarousel(props: OwnProps) {
         <div className={s.NavArrows}>{">"}</div>
       </div>
       <div className={s.Body}>
-        <Playlist
-          image={playlists[0].image_url}
-          title={playlists[0].name}
-          description={playlists[0].description}
-        ></Playlist>
+        {playlists.map((item) => {
+          return (
+            <div className={s.Playlist}>
+              <Playlist
+                image={item.image_url}
+                title={item.name}
+                description={item.description}
+              ></Playlist>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
