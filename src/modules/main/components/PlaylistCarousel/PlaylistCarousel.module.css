@@ -23,3 +23,34 @@
   margin-right: 25px;
   margin-bottom: 20px;
 }
+
+.LeftArrow,
+.RightArrow {
+  width: 11px;
+  height: 11px;
+  border-left: 3px solid rgba(25, 20, 20, 1);
+  border-bottom: 3px solid rgba(25, 20, 20, 1);
+}
+
+.NavArrows {
+  display: flex;
+  margin-right: 27px;
+  margin-top: 12px;
+}
+.LeftArrow {
+  margin-right: 19px;
+  transform: rotate(45deg);
+}
+.RightArrow {
+  transform: rotate(-135deg);
+}
+
+.DisabledArrow {
+  border-color: rgba(196, 196, 196, 1);
+}
+
+.Empty {
+  width: 200px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+}

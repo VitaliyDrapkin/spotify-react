@@ -1,4 +1,5 @@
-import React from "react";
+import classNames from "classnames";
+import React, { useState } from "react";
 import Playlist from "../Playlist";
 import s from "./PlaylistCarousel.module.css";
 
@@ -81,14 +82,42 @@ const playlists = [
 ];
 
 export default function PlaylistCarousel(props: OwnProps) {
+  const [showedPlaylists, setShowedPlaylists] = useState(playlists.slice(0, 5));
+  const [navigateSide, setNavigateSide] = useState("left");
+
+  const showNextPlaylists = () => {
+    setShowedPlaylists(playlists.slice(5, 10));
+    setNavigateSide("right");
+  };
+  const showPreviousPlaylists = () => {
+    setShowedPlaylists(playlists.slice(0, 5));
+    setNavigateSide("left");
+  };
+
   return (
     <div className={s.PlaylistCarousel}>
       <div className={s.Top}>
         <div className={s.Title}>Recently played</div>
-        <div className={s.NavArrows}>{">"}</div>
+        <div className={s.NavArrows}>
+          <div
+            className={classNames(
+              s.LeftArrow,
+              navigateSide === "left" && s.DisabledArrow
+            )}
+            onClick={showPreviousPlaylists}
+          ></div>
+          <div
+            className={classNames(
+              s.RightArrow,
+              (navigateSide === "right" || playlists.length < 5) &&
+                s.DisabledArrow
+            )}
+            onClick={showNextPlaylists}
+          ></div>
+        </div>
       </div>
       <div className={s.Body}>
-        {playlists.map((item) => {
+        {showedPlaylists.map((item) => {
           return (
             <div className={s.Playlist}>
               <Playlist
@@ -99,6 +128,9 @@ export default function PlaylistCarousel(props: OwnProps) {
             </div>
           );
         })}
+        <div className={s.Empty}></div>
+        <div className={s.Empty}></div>
+        <div className={s.Empty}></div>
       </div>
     </div>
   );
