@@ -5,7 +5,9 @@ import s from "./HomePage.module.css";
 export default function HomePage() {
   return (
     <div className={s.HomePage}>
-      <PlaylistCarousel></PlaylistCarousel>
+      <PlaylistCarousel playlistName={"Recently played"}></PlaylistCarousel>
+      <PlaylistCarousel playlistName={"Recently played"}></PlaylistCarousel>
+      <PlaylistCarousel playlistName={"Recently played"}></PlaylistCarousel>
     </div>
   );
 }

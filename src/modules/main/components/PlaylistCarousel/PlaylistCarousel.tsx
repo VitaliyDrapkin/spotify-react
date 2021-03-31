@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import Playlist from "../Playlist";
 import s from "./PlaylistCarousel.module.css";
 
-interface OwnProps {}
+interface OwnProps {
+  playlistName: string;
+}
 
 const playlists = [
   {
@@ -97,7 +99,7 @@ export default function PlaylistCarousel(props: OwnProps) {
   return (
     <div className={s.PlaylistCarousel}>
       <div className={s.Top}>
-        <div className={s.Title}>Recently played</div>
+        <div className={s.Title}>{props.playlistName}</div>
         <div className={s.NavArrows}>
           <div
             className={classNames(
