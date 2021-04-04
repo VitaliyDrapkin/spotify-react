@@ -22,14 +22,14 @@ const navItems: NavItemType[] = [
 
 export default function NavBar() {
   const location = useLocation();
-
   return (
     <div className={s.NavBar}>
       <div className={s.Logo}>
         <img src={logo} alt="" />
       </div>
-      {navItems.map((navItem) => (
+      {navItems.map((navItem, index) => (
         <NavItem
+          key={index}
           text={navItem.text}
           to={navItem.to}
           isActive={location.pathname === navItem.to}
