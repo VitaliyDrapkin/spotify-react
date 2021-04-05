@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
-import Playlist from "../Playlist";
+import PlaylistItem from "../PlaylistItem";
 import s from "./PlaylistCarousel.module.css";
 import { playlistVM } from "../../../../models/view-models/playlist.vm";
 
@@ -53,11 +53,7 @@ export default function PlaylistCarousel(props: OwnProps) {
         {showedPlaylists.map((item) => {
           return (
             <div className={s.Playlist} key={item.id}>
-              <Playlist
-                image={item.image}
-                title={item.name}
-                description={item.description}
-              ></Playlist>
+              <PlaylistItem playlist={item}></PlaylistItem>
             </div>
           );
         })}

@@ -1,0 +1,32 @@
+.PlaylistHeader {
+  position: fixed;
+  top: 0;
+  left: 270px;
+  height: 220px;
+  width: 1650px;
+}
+
+.Main {
+  padding: 88px 255px 157px 108px;
+  justify-content: space-between;
+  display: flex;
+  color: white;
+}
+.Right {
+  text-align: right;
+}
+
+.Name,
+.SongsCount {
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.Description,
+.Duration {
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 12px;
+  margin-left: 2px;
+  font-weight: 400;
+}
