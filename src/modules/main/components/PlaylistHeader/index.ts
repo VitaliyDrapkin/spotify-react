@@ -1,3 +1,3 @@
-import PlaylistHeader from "./PlaylistHeader";
+import PlaylistHeader from "./PlaylistHeaderContainer";
 
 export default PlaylistHeader;

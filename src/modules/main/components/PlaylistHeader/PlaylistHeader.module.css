@@ -16,8 +16,8 @@
   text-align: right;
 }
 
-.Name,
-.SongsCount {
+.Title,
+.Length {
   font-size: 36px;
   line-height: 43px;
 }
@@ -29,4 +29,13 @@
   margin-top: 12px;
   margin-left: 2px;
   font-weight: 400;
+}
+
+.Title,
+.Length,
+.Description,
+.Duration {
+  padding: 10px;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.418);
 }

@@ -1,24 +1,33 @@
 import React from "react";
 import s from "./PlaylistHeader.module.css";
 
-const styles = {
-  paperContainer: {
-    backgroundImage: `url(${"http://api.sprintt.co/spotify/images/world/w_10.jpg"})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "100%",
-  },
-};
+interface ownProps {
+  title: string;
+  image: string;
+  description: string;
+  length: string;
+  duration: string;
+}
 
-export default function PlaylistHeader() {
+export default function PlaylistHeader(props: ownProps) {
+  const styles = {
+    paperContainer: {
+      backgroundImage: `url(${props.image})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "100%",
+      backgroundPosition: "50% 75%",
+    },
+  };
+
   return (
     <div className={s.PlaylistHeader} style={styles.paperContainer}>
       <div className={s.Main}>
         <div className={s.Left}>
-          <div className={s.Name}>Saturday Morning</div>
-          <div className={s.Description}>Start off your saturday </div>
+          <div className={s.Title}>{props.title}</div>
+          <div className={s.Description}>{props.description}</div>
         </div>
         <div className={s.Right}>
-          <div className={s.SongsCount}>50 songs</div>
+          <div className={s.Length}>50 songs</div>
           <div className={s.Duration}>2 hr 30 min</div>
         </div>
       </div>
